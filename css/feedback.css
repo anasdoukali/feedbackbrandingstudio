@@ -43,3 +43,14 @@
   aspect-ratio: 8 / 5;
   object-fit: cover;
 }
+
+/* Keep the complete 27-character contact address inside its text container. */
+.headline-email-text .fullwidth-text__content.small {
+  font-size: min(5.2cqw, 9.6rem);
+  line-height: 1.2;
+  width: 100%;
+  justify-content: center;
+}
+.headline-email-text .fullwidth-text__content.small span {
+  line-height: 1.2;
+}
