@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+previous-custom-design/
+img/generated/*-original.png
+img/generated/prompts.json
+img/generated/*prompt*.txt
+img/placeholder-*.svg

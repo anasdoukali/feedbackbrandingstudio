@@ -1,0 +1,45 @@
+/* Feedback customizations only. Original Azurio layout, CSS and animation engine retained. */
+:root {--accent--light:#ff4b17;--accent--dark:#ff652e;--highlight--light:#ff946f;--highlight--dark:#ff946f;--accent:#ff4b17;--highlight:#ff946f;}
+.mxd-logo__text,.menu-logo__text {white-space:nowrap;}
+.mxd-logo__text span:last-child,.menu-logo__text span:last-child {font-size:1.2rem;letter-spacing:.04em;}
+.feedback-manifest-paragraph {margin-bottom:3rem;}
+.feedback-project-context {margin-top:1.5rem;line-height:1.5;}
+.mxd-menu__navigation .main-menu__link {display:flex;align-items:baseline;gap:2rem;}
+.mxd-menu__navigation .main-menu__link[aria-current="page"] {color:var(--accent);}
+.mxd-menu__data a {overflow-wrap:anywhere;}
+:focus-visible {outline:2px solid var(--accent);outline-offset:5px;}
+@media(max-width:767px){.mxd-header__logo {max-width:65%;}.mxd-logo__text span:last-child{font-size:1rem;}.mxd-menu__navigation .main-menu__link{gap:1rem;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+
+/* Replace the hero's CSS background placeholder and fit the longer Feedback name. */
+.mxd-hero-01 {
+  background-image: url('../img/generated/hero-abstract-no-text.jpg');
+  background-position: center;
+}
+.mxd-hero-01__cover {
+  background: linear-gradient(180deg, rgba(0,0,0,.40), rgba(0,0,0,.64));
+}
+.mxd-hero-01__caption .fullwidth-text__content,
+.mxd-footer__fw-mark .fw-mark__content {
+  font-size: 18.5cqw;
+  justify-content: center;
+  width: 100%;
+}
+.mxd-hero-01__caption .fullwidth-text__wrap,
+.mxd-footer__fw-mark .fw-mark__wrap {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.mxd-hero-01__caption {
+  margin-bottom: 0;
+}
+.mxd-hero-01__bottom {
+  padding-bottom: 2rem;
+}
+.mxd-hero-01__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+}
