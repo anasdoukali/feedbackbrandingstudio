@@ -7918,6 +7918,9 @@ form textarea:required:valid {
           flex-direction: column;
   gap: 0.4rem;
 }
+.mxd-hero-01__data-tags .tag {
+  white-space: nowrap;
+}
 @media only screen and (min-width: 768px) {
   .mxd-hero-01__data-tags {
     gap: 6rem;

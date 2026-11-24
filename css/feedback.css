@@ -1,6 +1,12 @@
 /* Feedback customizations only. Original Azurio layout, CSS and animation engine retained. */
 :root {--accent--light:#ff4b17;--accent--dark:#ff652e;--highlight--light:#ff946f;--highlight--dark:#ff946f;--accent:#ff4b17;--highlight:#ff946f;}
 .mxd-logo__text,.menu-logo__text {white-space:nowrap;}
+.mxd-header__link .btn-caption,
+.mxd-header__controls .mxd-color-switcher .switcher-text {
+  font-family: var(--_font-default);
+  font-weight: 600;
+  letter-spacing: 0;
+}
 .mxd-logo__text span:last-child,.menu-logo__text span:last-child {font-size:1.2rem;letter-spacing:.04em;}
 .feedback-manifest-paragraph {margin-bottom:3rem;}
 .feedback-project-context {margin-top:1.5rem;line-height:1.5;}
@@ -54,3 +60,20 @@
 .headline-email-text .fullwidth-text__content.small span {
   line-height: 1.2;
 }
+
+/* Give the studio introduction its own breathing room above the CTA. */
+.feedback-studio-intro > .btn { margin-top: clamp(2.4rem, 3vw, 4.8rem); }
+
+/* Hide hover media before the animation engine initializes, including on touch. */
+.headline-banner-01 { clip-path: inset(0 0 100% 0); }
+
+.feedback-contact-form { width: 100%; }
+.feedback-contact-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4rem; }
+.feedback-contact-fields label { display: flex; flex-direction: column; gap: 1rem; min-width: 0; font-size: 1.6rem; color: var(--t-bright); }
+.feedback-contact-fields .feedback-field-wide { grid-column: 1 / -1; }
+.feedback-contact-fields input,
+.feedback-contact-fields textarea { width: 100%; min-width: 0; margin: 0; padding: 1.4rem 0; border: 0; border-bottom: 1px solid var(--t-muted); border-radius: 0; background: transparent; color: var(--t-bright); font: inherit; font-size: 1.8rem; line-height: 1.5; }
+.feedback-contact-fields textarea { resize: vertical; min-height: 12rem; }
+.feedback-form-note { margin: 2.4rem 0; }
+.feedback-contact-location { margin-top: 1.6rem; }
+@media (max-width: 575px) { .feedback-contact-fields { grid-template-columns: minmax(0, 1fr); } }

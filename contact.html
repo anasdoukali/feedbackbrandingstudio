@@ -17,10 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <!-- Branding Studio Favicon & Icons Start -->
-    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml"> 
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <link rel="icon" href="img/favicon/favicon.ico?v=db-1" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg?v=db-1" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png?v=db-1">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest?v=db-1">
     <!-- Branding Studio Favicon & Icons End -->
 
     <!-- Facebook Metadata Start -->
@@ -45,7 +45,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
-  <meta name="description" content="Feedback est un studio de branding basé à Marrakech. Nous travaillons avec des entreprises qui veulent compter."><link rel="stylesheet" href="css/feedback.css?v=email-fit-1"></head>
+  <meta name="description" content="Feedback est un studio de branding basé à Marrakech. Nous travaillons avec des entreprises qui veulent compter."><link rel="stylesheet" href="css/feedback.css?v=layout-contact-2"></head>
 
   <body>
 
@@ -207,7 +207,19 @@
                             
                             <!-- Block - Contact Form Start -->
                             <div class="mxd-block contact">
-                              <div class="mxd-form-container"><a class="btn btn-default-icon btn-default-accent slide-right" href="mailto:Hafid@FeedbackBranding.Studio"><span class="btn-caption mxd-scramble">Écrivez-nous</span><i class="ph-bold ph-arrow-up-right"></i></a><p class="t-small">Marrakech, Maroc</p></div>
+                              <div class="mxd-form-container mxd-grid-item">
+                                <form class="feedback-contact-form" action="mailto:Hafid@FeedbackBranding.Studio" method="post" enctype="text/plain">
+                                  <div class="feedback-contact-fields">
+                                    <label for="contact-name">Nom<input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required></label>
+                                    <label for="contact-email">Email<input id="contact-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required></label>
+                                    <label class="feedback-field-wide" for="contact-phone">Téléphone<input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="Votre numéro de téléphone"></label>
+                                    <label class="feedback-field-wide" for="contact-message">Message<textarea id="contact-message" name="message" rows="4" placeholder="Parlez-nous de votre projet" required></textarea></label>
+                                  </div>
+                                  <p class="t-small feedback-form-note">Ce formulaire ouvre votre messagerie avec votre message prérempli.</p>
+                                  <button class="btn btn-default-accent" type="submit"><span class="btn-caption">Écrivez-nous</span></button>
+                                </form>
+                                <p class="t-small feedback-contact-location">Marrakech, Maroc</p>
+                              </div>
                             </div>
                             <!-- Block - Contact Form End -->
                             
@@ -308,6 +320,7 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/contact.js"></script>
     <!-- Load Scripts End -->
     
   </body>
