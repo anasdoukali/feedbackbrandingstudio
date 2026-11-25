@@ -77,3 +77,55 @@
 .feedback-form-note { margin: 2.4rem 0; }
 .feedback-contact-location { margin-top: 1.6rem; }
 @media (max-width: 575px) { .feedback-contact-fields { grid-template-columns: minmax(0, 1fr); } }
+
+/* Use the supplied transparent artwork for every brand signature. */
+.feedback-full-logo { display: block; width: clamp(14rem, 13vw, 20rem); height: auto; flex-shrink: 0; }
+.feedback-wordmark { display: block; width: 100%; height: auto; }
+.mxd-hero-01__caption .fullwidth-text__content,
+.mxd-footer__fw-mark .fw-mark__content { line-height: 1; }
+:root[color-scheme="light"] .feedback-full-logo,
+:root[color-scheme="light"] .feedback-wordmark { filter: brightness(0); }
+/* The desktop menu keeps its dark background in both themes. */
+@media (min-width: 1200px) {
+  :root[color-scheme="light"] .menu-logo .feedback-full-logo { filter: none; }
+}
+@media (max-width: 575px) {
+  .feedback-full-logo { width: 13rem; }
+}
+
+/* Permanent dark surfaces retain the white artwork in either color theme. */
+:root[color-scheme] .mxd-hero-01 .feedback-wordmark,
+:root[color-scheme] .mxd-header-permanent .feedback-full-logo {
+  filter: none;
+}
+
+/* Smooth, consistent strokes for the header's contact and theme controls. */
+.mxd-header .feedback-line-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Compact signature centered between contact details and copyright. */
+.mxd-footer .feedback-footer-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 78rem) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+}
+.feedback-footer-info .footer-blocks__column { width: 100%; padding-top: 0; padding-bottom: 0; }
+.feedback-footer-logo { display: block; width: 100%; }
+.feedback-footer-info .footer-data a { overflow-wrap: anywhere; }
+@media (max-width: 991px) {
+  .mxd-footer .feedback-footer-info { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 3.2rem; }
+  .feedback-footer-logo { width: min(66rem, 100%); }
+  .feedback-footer-info .footer-blocks__column,
+  .feedback-footer-info .footer-blocks__data { align-items: center; justify-content: center; text-align: center; }
+}
+
+/* Leave breathing room beneath the footer signature on every screen. */
+.mxd-footer { padding-bottom: clamp(5rem, 6vw, 10rem); }
