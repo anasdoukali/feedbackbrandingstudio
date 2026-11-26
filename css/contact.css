@@ -1,0 +1,44 @@
+/* Contact-only editorial composition; shared navigation and branding stay intact. */
+body:has(.contact-editorial) { --contact-paper: #f5f5f5; --contact-muted: #909090; --contact-rule: #303030; --contact-orange: #ff501c; background-color: #111; }
+:root[color-scheme="light"] body:has(.contact-editorial) { --contact-paper: #171717; --contact-muted: #626262; --contact-rule: #c7c7c7; background-color: #f5f5f5; }
+.contact-editorial { padding-top: clamp(5rem, 7vw, 11rem); }
+.contact-editorial > .container-fluid > .row { align-items: flex-start; row-gap: 6rem; }
+.contact-poster-column { min-width: 0; }
+.contact-availability { display: flex; align-items: center; gap: 1.2rem; color: var(--contact-muted); font-size: 1.4rem; letter-spacing: .09em; margin-bottom: 3.2rem; }
+.contact-availability > span { width: .8rem; height: .8rem; border-radius: 50%; background: var(--contact-orange); animation: contact-pulse 2.8s ease-in-out infinite; flex-shrink: 0; }
+.inner-headline__title .contact-poster { font-family: "Manrope", Arial, sans-serif; font-size: clamp(4.5rem, 6.3vw, 12rem); font-weight: 800; line-height: .95; letter-spacing: -.06em; color: var(--contact-paper); padding: 0; margin: 0; }
+.contact-line { display: block; overflow: hidden; padding: .1em .08em .15em 0; margin-bottom: -.17em; }
+.contact-line > span { display: block; }
+.contact-outline { color: transparent; -webkit-text-stroke: 1px var(--contact-paper); transition: color .5s ease; }
+.contact-outline:hover { color: var(--contact-paper); }
+.contact-orange { color: var(--contact-orange); }
+.contact-poster-bottom { border-top: 1px solid var(--contact-rule); padding-top: 2.8rem; margin-top: 4.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.contact-poster-bottom p { font-size: 1.6rem; line-height: 1.5; color: var(--contact-muted); max-width: 24ch; }
+.contact-magnet { display: flex; align-items: center; justify-content: center; width: 8rem; height: 8rem; flex-shrink: 0; border-radius: 50%; background: var(--contact-orange); color: #111; }
+.contact-magnet svg { width: 3.6rem; height: 3.6rem; fill: none; stroke: currentColor; stroke-width: 1.5; transition: transform .45s ease; }
+.contact-magnet:hover svg { transform: rotate(-45deg); }
+.contact-form-column .inner-headline__caption { margin: 0 0 4rem; padding-top: 0; }
+.contact-form-column .inner-headline__caption p { font-size: clamp(2rem, 1.9vw, 3rem); line-height: 1.45; color: var(--contact-paper); }
+.contact-form-column .feedback-contact-fields { gap: 3rem 2.4rem; }
+.contact-field-label { display: flex; align-items: baseline; gap: 1.2rem; color: var(--contact-paper); }
+.contact-field-label > span { color: var(--contact-muted); font-size: 1.2rem; }
+.contact-editorial .feedback-contact-fields input,
+.contact-editorial .feedback-contact-fields textarea { color: var(--contact-paper); border-bottom-color: var(--contact-rule); background-image: linear-gradient(var(--contact-orange), var(--contact-orange)); background-repeat: no-repeat; background-size: 0 2px; background-position: left bottom; transition: background-size .35s ease, border-color .35s ease; }
+.contact-editorial .feedback-contact-fields input:focus,
+.contact-editorial .feedback-contact-fields textarea:focus { background-size: 100% 2px; border-bottom-color: transparent; outline-offset: 6px; }
+.contact-editorial input::placeholder,
+.contact-editorial textarea::placeholder { color: var(--contact-muted); opacity: 1; }
+.contact-editorial .feedback-form-note,
+.contact-editorial .feedback-contact-location { color: var(--contact-muted); font-size: 1.4rem; line-height: 1.6; }
+@keyframes contact-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (min-width: 1200px) { .contact-form-column { padding-left: clamp(3rem, 5vw, 9rem); padding-top: 5rem; } }
+@media (max-width: 1199px) { .inner-headline__title .contact-poster { font-size: clamp(4.5rem, 10.4vw, 11rem); } .contact-editorial { padding-top: 5rem; } }
+@media (max-width: 575px) { .inner-headline__title .contact-poster { font-size: clamp(3.5rem, 10.3vw, 6rem); } .contact-availability { font-size: 1.2rem; letter-spacing: .04em; } .contact-magnet { width: 6.4rem; height: 6.4rem; } }
+@media (prefers-reduced-motion: reduce) { .contact-availability > span { animation: none; } .contact-editorial *, .contact-editorial *::before { transition: none !important; scroll-behavior: auto; } }
+
+/* Field focus uses the animated underline instead of a rectangular outline. */
+.contact-editorial .feedback-contact-fields input:focus,
+.contact-editorial .feedback-contact-fields textarea:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -45,7 +45,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
-  <meta name="description" content="Feedback est un studio de branding basé à Marrakech. Nous travaillons avec des entreprises qui veulent compter."><link rel="stylesheet" href="css/feedback.css?v=footer-logo-9"></head>
+  <meta name="description" content="Feedback est un studio de branding basé à Marrakech. Nous travaillons avec des entreprises qui veulent compter."><link rel="stylesheet" href="css/feedback.css?v=contact-type-15"><link rel="stylesheet" href="css/contact.css?v=poster-3"></head>
 
   <body>
 
@@ -138,13 +138,12 @@
       </div>
       <!-- header controls -->
       <div class="mxd-header__controls loading-fade">
-        <a class="btn mxd-header__link slide-right-up" href="contact.html" aria-label="Parlons">
+        <a class="btn feedback-arrow-button slide-right-up mxd-header__link " href="contact.html" aria-label="Parlons">
           <span class="btn-caption mxd-scramble">Parlons</span>
-          <i><svg class="feedback-line-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
-          </i>
-          <!-- Phosphor icon -->
-          <!-- <i class="ph-bold ph-arrow-up-right"></i> -->
-        </a>
+
+
+
+        <i aria-hidden="true"><svg class="feedback-line-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></svg></i></a>
         <button id="color-switcher" class="btn mxd-color-switcher permanent" type="button" role="switch" aria-label="light/dark mode" aria-checked="true"></button>
       </div>
     </header>
@@ -174,18 +173,20 @@
                   </div>
                   <div class="col-12">
                     <!-- content -->
-                    <div class="inner-headline__content has-medium-title">
+                    <div class="inner-headline__content has-medium-title contact-editorial">
                       <div class="container-fluid p-0">
                         <div class="row g-0">
-                          <div class="col-12 col-xl-6 mxd-grid-item">
+                          <div class="col-12 col-xl-6 mxd-grid-item contact-poster-column">
                             <div class="inner-headline__title">
-                              <h1 class="medium loading-split">Une idée. Un projet. Une envie de changer les choses.</h1>
+                              <p class="contact-availability"><span aria-hidden="true"></span>OUVERT AUX BELLES IDÉES</p>
+                              <h1 class="contact-poster" aria-label="Une idée. Un projet. On change la donne."><span class="contact-line"><span>UNE IDÉE.</span></span><span class="contact-line"><span class="contact-outline">UN PROJET.</span></span><span class="contact-line"><span class="contact-orange">ON CHANGE</span></span><span class="contact-line"><span class="contact-orange">LA DONNE.</span></span></h1>
+                              <div class="contact-poster-bottom"><p>Tout commence par une conversation.</p></div>
                             </div>
                             <!-- <div class="inner-headline__subtitle">
                               <p>Everything <span>you need to know</span></p>
                             </div> -->
                           </div>
-                          <div class="col-12 col-xl-6">
+                          <div class="col-12 col-xl-6 contact-form-column">
                             <!-- split header caption -->
                             <div class="inner-headline__caption split-caption-title pre-form"><div class="mxd-grid-item"><p class="t-bold t-large loading-split">Quelle que soit l’étape à laquelle vous en êtes — nous commençons toujours par écouter.</p></div></div>
                             <!-- split header form block -->
@@ -195,13 +196,13 @@
                               <div class="mxd-form-container mxd-grid-item">
                                 <form class="feedback-contact-form" action="mailto:Hafid@FeedbackBranding.Studio" method="post" enctype="text/plain">
                                   <div class="feedback-contact-fields">
-                                    <label for="contact-name">Nom<input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required></label>
-                                    <label for="contact-email">Email<input id="contact-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required></label>
-                                    <label class="feedback-field-wide" for="contact-phone">Téléphone<input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="Votre numéro de téléphone"></label>
-                                    <label class="feedback-field-wide" for="contact-message">Message<textarea id="contact-message" name="message" rows="4" placeholder="Parlez-nous de votre projet" required></textarea></label>
+                                    <label for="contact-name"><span class="contact-field-label"><span aria-hidden="true">01</span>Nom</span><input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Votre nom" required></label>
+                                    <label for="contact-email"><span class="contact-field-label"><span aria-hidden="true">02</span>Email</span><input id="contact-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required></label>
+                                    <label class="feedback-field-wide" for="contact-phone"><span class="contact-field-label"><span aria-hidden="true">03</span>Téléphone</span><input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="Votre numéro de téléphone"></label>
+                                    <label class="feedback-field-wide" for="contact-message"><span class="contact-field-label"><span aria-hidden="true">04</span>Message</span><textarea id="contact-message" name="message" rows="4" placeholder="Parlez-nous de votre projet" required></textarea></label>
                                   </div>
                                   <p class="t-small feedback-form-note">Ce formulaire ouvre votre messagerie avec votre message prérempli.</p>
-                                  <button class="btn btn-default-accent" type="submit"><span class="btn-caption">Écrivez-nous</span></button>
+                                  <button class="btn feedback-arrow-button slide-right-up btn-default-icon btn-default-accent" type="submit"><span class="btn-caption">Écrivez-nous</span><i aria-hidden="true"><svg class="feedback-line-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></svg></i></button>
                                 </form>
                                 <p class="t-small feedback-contact-location">Marrakech, Maroc</p>
                               </div>
@@ -277,7 +278,7 @@
                 <p class="footer-data anim-uni-slide-down">Marrakech, Maroc</p>
               </div>
             </div>
-            <a class="feedback-footer-logo" href="index.html" aria-label="Feedback — accueil"><img class="feedback-wordmark" src="img/branding/feedback-wordmark.png" width="2168" height="521" alt="Feedback" loading="lazy" decoding="async"></a>
+            <a class="feedback-footer-logo" href="index.html" aria-label="Feedback — accueil"><img class="feedback-wordmark" src="img/branding/feedback-full-logo.png" width="2168" height="725" alt="Feedback Branding Studio" loading="lazy" decoding="async"></a>
             <div class="footer-blocks__column mxd-grid-item justify-end">
               <div class="footer-blocks__data justify-end"><p class="footer-data">©2026 Feedback Branding Studio</p></div>
             </div>
@@ -296,7 +297,7 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js"></script>
     <script src="js/app.js?v=line-icons-2"></script>
-    <script src="js/contact.js"></script>
+    <script src="js/contact.js?v=poster-1"></script>
     <!-- Load Scripts End -->
     
   </body>
